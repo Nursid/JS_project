@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add two number</title>
+    <script>
+     ;
+      function  add(){
+        var x=document.getElementById("first").value;
+        var y=document.getElementById("Second").value;
+       var sum= parseInt(x)+parseInt(y);
+        document.getElementById("res").value=sum;
+        }
+    </script>
+</head>
+<body>
+  Enter first Numebr:<input type="number" name="" id="first"><br><br>
+Enter Second Number <input type="number" name="" id="Second"><br><br>
+ 
+<button onclick="add()" >ADD</button><br><br>
+ADD <input type="text" id="res">
+<!-- <h1 id="res"></h1> -->
+</body>
+</html>

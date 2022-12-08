@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Counter</title>
+    <style>
+     .container{
+            margin: 100px;
+            padding: 62px 367px;
+            display: flex;
+            border: 2px solid black;
+            background-color: aquamarine;
+        }
+        #res{
+            padding: 10px;
+        }
+.clk{
+    text-align: center;
+    color: blue;
+}
+    </style>
+    <script>
+        function clock(){
+      var d=new Date();
+      var h=d.getHours();
+      var m=d.getMinutes();
+      var s=d.getSeconds();
+      var session="AM";
+if(h>12){
+    h=h-12;
+}
+if(h>=12){
+    session="PM";
+}
+h=h<10?"0"+h:h;
+m=m<10?"0"+m:m;
+s=s<10?"0"+s:s;
+    var date=h+" : "+m+" : "+s+" "+session;
+    document.getElementById("res").innerText=date;
+    setTimeout(clock,1000);
+        }
+    </script>
+</head>
+<body onload="clock()">
+    <h1 class="clk">Digital clock</h1>
+    <div class="container">
+    <h1 id="res">
+
+    </h1>
+    </div>
+   
+</body>
+</html>
